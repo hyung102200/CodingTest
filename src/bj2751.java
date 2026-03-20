@@ -2,7 +2,7 @@ import java.io.*;
 
 public class bj2751 {
     public static void main(String[] args) throws IOException {
-        // 백준 2751번 수 정렬하기 2
+        // 백준 2751번 수 정렬하기 2.
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
