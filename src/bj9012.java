@@ -1,31 +1,30 @@
 import java.io.*;
-import java.util.Stack;
 
 public class bj9012 {
     public static void main(String[] args) throws IOException {
+        // 백준 9012번 괄호
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int t = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < t; i++) {
-            char[] arr = (br.readLine()).toCharArray();
-            Stack<Character> stack = new Stack<>();
+            String s =  br.readLine();
+            int count = 0;
             boolean b = true;
-            for(char c : arr) {
-                if(c == '(') stack.push(c);
-                else if(c == ')') {
-                    if (stack.isEmpty()) {
-                        b = false;
-                        break;
-                    }
-                    stack.pop();
+
+            for(int j=0; j<s.length(); j++) {
+                if(s.charAt(j) == '(') count++;
+                else count--;
+
+                if(count < 0) {
+                    b = false;
+                    break;
                 }
             }
-            if(!stack.isEmpty()) b = false;
 
-            if(b) bw.write("YES\n");
-            else bw.write("NO\n");
+            if(count != 0) b = false;
+            bw.write(b ? "YES\n" : "NO\n");
         }
 
         bw.flush();
