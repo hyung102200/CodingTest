@@ -19,7 +19,7 @@ public class bj2447_2week {
 
         for(char[] c : arr) {
             for(char cc : c) {
-                bw.write(cc + "");
+                bw.write(cc);
             }
             bw.newLine();
         }
