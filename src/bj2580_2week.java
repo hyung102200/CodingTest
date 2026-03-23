@@ -39,7 +39,7 @@ public class bj2580_2week {
     }
 
     private static void solve(int index) throws IOException {
-        // 빈칸의 개수만큼 숫자를 채운 횟수가 같으면 출력하기
+        // 빈칸의 개수만큼 숫자를 채운 횟수(index)가 같으면 출력하기
         if(index == blank.size()) {
             for(int i = 0; i < 9; i++) {
                 for(int j = 0; j < 9; j++) {
