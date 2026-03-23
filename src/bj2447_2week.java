@@ -29,7 +29,7 @@ public class bj2447_2week {
     }
 
     // 재귀 이용하여 별 찍기
-    static private void star(int x, int y, int size) {
+    private static void star(int x, int y, int size) {
         if(size == 1) {
             arr[x][y] = '*';
             return;

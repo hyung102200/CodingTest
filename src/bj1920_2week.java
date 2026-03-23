@@ -29,7 +29,7 @@ public class bj1920_2week {
         bw.close();
     }
     // 이분 검색
-    static private int search(int[] arr, int key, int l, int r) {
+    private static int search(int[] arr, int key, int l, int r) {
         int mid;
         if(l <= r) {
             mid = l + (r - l)/2;
