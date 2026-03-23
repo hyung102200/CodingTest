@@ -18,6 +18,7 @@ public class bj2580_2week {
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
     public static void main(String[] args) throws IOException {
+        // 백준 2580번 스도쿠
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         sudoku = new int[9][9];
