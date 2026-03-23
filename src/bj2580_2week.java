@@ -84,6 +84,7 @@ public class bj2580_2week {
         // num이 포함되는 3*3박스의 첫번째 칸 좌표 구하기
         int startX = (x / 3) * 3;
         int startY = (y / 3) * 3;
+
         for(int i=startX; i<startX+3; i++) {
             for(int j=startY; j<startY+3; j++) {
                 if(sudoku[i][j] == num) {
