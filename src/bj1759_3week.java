@@ -8,6 +8,7 @@ public class bj1759_3week {
     static int l, c;
     static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) throws IOException {
+        // (골드 5) 백준 1759번 암호 만들기
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
@@ -21,6 +22,7 @@ public class bj1759_3week {
         for(int i=0; i<c; i++) {
             arr[i] = st.nextToken();
         }
+        // 출력은 사전 순으로 된 단어이므로 배열 정렬하기.
         Arrays.sort(arr);
         makePasswd(0, 0);
         bw.write(sb.toString());
@@ -39,11 +41,15 @@ public class bj1759_3week {
             return;
         }
 
+        // 중복단어가 없도록 start값 늘려주고, depth값도 늘려주기
         for(int i=start; i<c; i++) {
             result[depth] = arr[i];
+            // 백트래킹
             makePasswd(i + 1, depth + 1);
         }
     }
+
+    // 문제 조건에 맞는지 체크하기
     private static boolean isValid() {
         int mo = 0;
         int ja = 0;
